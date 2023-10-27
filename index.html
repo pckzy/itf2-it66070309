@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script>
+        function setName(){
+            document.getElementById("name-input").innerHTML = document.getElementById("username").value + "'s Gallery";
+        }
+        function setImg(){
+            document.getElementById("linkImage").style.backgroundImage = "url(" + document.getElementById("profile-image").value + ")";
+        }
+    </script>
+</head>
+
+<body>
+    <main>
+        <div class="profile">
+            <div class="profile-img" id="linkImage"></div>
+            <div class="notification">1</div>
+        </div>
+        <div class="username">
+            <a href="https://github.com/pckzy" target="_blank" class="on-hover">
+            <p style="font-size: xx-large; font-weight: 1000;" id="name-input">SARUN's Gallery</p>
+            </a>
+        </div>
+        <div class="input-group">
+            <div><label style="font-family: fantasy; font-weight: 400;">Set the username :</label><input style="margin-left: 10px; height: 25px; font-size: medium;" type="text" 
+                id="username"><button style="border-radius: 5px; font-family: fantasy; font-weight: bold; margin-left: 15px;" id="setName" onclick="setName()">set</button></div>
+            <div><label style="font-family: fantasy; font-weight: 400;">Set the profile image URL :</label><input style="margin-left: 10px; height: 25px; font-size: medium;" type="text" 
+                id="profile-image"><button style="border-radius: 5px; font-family: fantasy; font-weight: bold; margin-left: 15px;" id="setProfile" onclick="setImg()">set</button></div>
+        </div>
+        <div class="gallery">
+            <div class="gallery-image col-span" style="background-image: url(./11.jpg);"></div>
+            <div class="gallery-image" style="background-image: url(./2.jpg);"></div>
+            <div class="gallery-image" style="background-image: url(./3.jpg);"></div>
+            <div class="gallery-image" style="background-image: url(./4.jpg);"></div>
+            <div class="gallery-image row-span" style="background-image: url(./5.jpeg);"></div>
+            <div class="gallery-image" style="background-image: url(./6.jpg);"></div>
+            <div class="gallery-image" style="background-image: url(./7.jpg);"></div>
+            <div class="gallery-image" style="background-image: url(./8.jpg);"></div>
+            <div class="gallery-image" style="background-image: url(./9.jpg);"></div>
+            <div class="gallery-image" style="background-image: url(./10.jpg);"></div>
+        </div>
+    </main>
+</body>
+</html>
